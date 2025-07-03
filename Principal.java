@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args){
-        Scanner teclado = new Scanner(System.in);
-        SistemaCadastro cadastro = new SistemaCadastro();
-        int opcao;
+        Scanner teclado = new Scanner(System.in); //gerenciar entrada e saída
+        SistemaCadastro cadastro = new SistemaCadastro(); //gerenciar lista de alunos
+        int opcao; //guardar a escolha do usuário no menu
 
         while (true) {
             System.out.println("1. Adicionar aluno");
@@ -14,7 +14,7 @@ public class Principal {
             System.out.print("Escolha uma opção: ");
 
             opcao = teclado.nextInt();
-            teclado.nextLine();
+            teclado.nextLine(); //limpa o buffer para evitar problemas na próxima leitura de texto
 
             switch (opcao) {
                 case 1:
